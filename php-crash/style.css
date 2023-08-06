@@ -1,0 +1,114 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: 'Cairo', sans-serif;
+}
+.feedbackProject .content{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% , -50%);
+  width: 500px;
+  background: aliceblue;
+  padding: 30px 0;
+  text-align: center;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.input{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+label{
+  font-size: 15px;
+  text-align: start;
+}
+input{
+  height: 45px ;
+  outline: none;
+  border: none;
+  padding: 0 15px;
+  font-size: 15px;
+}
+.alert{
+  text-align: start;
+  color: red;
+}
+input[type ='submit']{
+  color: white;
+  background-color: cadetblue;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+input[type ='submit']:hover{
+  color: white;
+  background-color:darkblue ;
+}
+
+textarea{
+  border: none;
+  padding: 5px 15px;
+  max-height: 100px;
+  min-height: 35px;
+  height: 100px;
+  max-width: 400px;
+  min-width: 320px;
+  outline: none;
+  font-size: 15px;
+}
+.notes-page{
+  max-width: 500px;
+  margin: 0 auto;
+  
+}
+.notes-page h1{
+  text-align: center;
+  color: darkblue;
+  margin: 20px 0;
+}
+.notes-page .content .note{
+  border: 1px solid #333;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+}
+.notes-page .content .note p{
+  font-size: 16px;
+}
+
+.notes-page .content .note h3{
+  font-size: 14px;
+  margin-bottom: 0;
+  font-weight: 500;
+  color: darkblue;
+}
+
+.notes-page .content .note h3 span{
+  font-weight: 900;
+}
+
+.notes-page .content .note +a{
+  font-size:18px;
+  text-decoration: none;
+  color: #fff;
+  background: tomato;
+  padding: 4px 15px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.notes-page .content .note +a:hover{
+  color: tomato;
+  border:1px solid tomato;
+  background: #fff;
+}
