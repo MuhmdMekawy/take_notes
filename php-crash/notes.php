@@ -21,6 +21,8 @@ $notes = mysqli_fetch_all($result, MYSQLI_ASSOC);
 </head>
 
 <body>
+  <a href='./logout.php' class='logout'>Logout</a>
+
   <div class="notes-page">
     <h1>The Notes</h1>
     <?php if (empty($notes)) : ?>
@@ -32,7 +34,7 @@ $notes = mysqli_fetch_all($result, MYSQLI_ASSOC);
           <p>
             <?php echo $item['body'] ?>
           </p>
-          <h3>By : <span><?php echo $item['name'] ?></span> on : <span><?php echo $item['date'] ?></span></h3>
+          <h3>By : <span style='color : tomato;'><?php echo $item['name'] ?></span> on : <span><?php echo $item['date'] ?></span></h3>
         </div>
       <?php endforeach; ?>
       <a href="./index.php">Back to Home</a>

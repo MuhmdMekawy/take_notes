@@ -6,6 +6,7 @@
 body{
   font-family: 'Cairo', sans-serif;
 }
+
 .feedbackProject .content{
   position: absolute;
   left: 50%;
@@ -111,4 +112,44 @@ textarea{
   color: tomato;
   border:1px solid tomato;
   background: #fff;
+}
+
+.login{
+  background: darkslategrey;
+  padding: 30px 25px;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  transform: translate(-50% , -50%);
+}
+.login input[type='submit']:hover{
+  background: darkolivegreen;
+}
+.login input[type='submit'] + a{
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+.login input[type='submit'] + a:hover{
+  text-decoration: underline;
+}
+
+
+.logout{
+  position: fixed;
+  top: 0;
+  right: 30px;
+  padding: 5px 10px;
+  background: red;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.logout:hover{
+  padding: 20px 10px;
 }

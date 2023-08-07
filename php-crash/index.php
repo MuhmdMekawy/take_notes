@@ -8,11 +8,11 @@ if (isset($_POST['submit'])) {
   } else {
     $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
   }
-  if ($_POST['email'] === '') {
-    $emailErr = 'this field is required';
-  } else {
-    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-  }
+  // if ($_POST['email'] === '') {
+  //   $emailErr = 'this field is required';
+  // } else {
+  //   $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+  // }
   if ($_POST['notes'] === '') {
     $notesErr = 'this field is required';
   } else {
@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
   if (empty($nameErr) && empty($emailErr) && empty($notesErr)) {
     include './database/database.php';
 
-    $sql = "INSERT INTO notes (name, email, body) VALUES ('$name', '$email', '$notes')";
+    $sql = "INSERT INTO notes (name, email, body) VALUES ('$name', '', '$notes')";
     if (mysqli_query($conn, $sql)) {
       header('Location: ./notes.php');
     } else {
@@ -52,6 +52,7 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
+  <a href='./logout.php' class='logout'>Logout</a>
   <div class="feedbackProject">
     <div class="content">
       <h1>Enter Your Notes</h1>
@@ -61,11 +62,11 @@ if (isset($_POST['submit'])) {
           <input dir="auto" type="text" name="name" id="name" placeholder=" Your Name:">
           <div class="alert"><?php echo $nameErr ?? null ?></div>
         </div>
-        <div class="input">
+        <!-- <div class="input">
           <label for="email">Email:</label>
           <input dir="auto" type="text" name="email" id="email" placeholder="Your Email:">
           <div class="alert"><?php echo $emailErr ?? null ?></div>
-        </div>
+        </div> -->
         <div class="input">
           <label for="Notes">Notes:</label>
           <textarea dir="auto" name=" notes" id="Notes" placeholder="Your Notes:"></textarea>
